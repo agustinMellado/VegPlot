@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetallesHortaliza">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imagenHor"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ejhortaliza"/>
+
+
+            <TextView
+                android:id="@+id/nombreDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="zanahoria"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+
+                />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#9F8BC34A"
+            android:orientation="vertical"
+
+            android:padding="5dp">
+            <!-- descripcion-->
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_input"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:backgroundTint="#FFFCFC"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="descripcion asdasdasdasd"
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
+            <!-- modo de siembra-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Modo de siembra:"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_input"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:backgroundTint="#FFFCFC"
+                android:layout_gravity="center_horizontal"
+                >
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Germinacion:"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/germinacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="germinacion"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profundidad: "
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/profundidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="profundidad"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Distancia entre plantas: "
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/distancia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="distancia"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Temporada: "
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/temporada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="temporada"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!-- modo de cultivo-->
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Modo de cultivo:"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_input"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:backgroundTint="#FFFCFC"
+                android:layout_gravity="center_horizontal"
+                >
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Altura: "
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/altura"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="altura"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cosecha: "
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/cosecha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cosecha"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Riego: "
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/riego"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="riego"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Modo de siembra: "
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/siembra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="siembra"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="agregar a huerta"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

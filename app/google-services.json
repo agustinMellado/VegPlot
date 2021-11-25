@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "422728581641",
+    "project_id": "vegplot-9609d",
+    "storage_bucket": "vegplot-9609d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422728581641:android:a839cae21a56141b4c2ed8",
+        "android_client_info": {
+          "package_name": "com.example.vegplot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422728581641-oh2s95nv3g7dc1vtd86fajfspnjesvun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUMOsjE9atdRR0c7kNGYlJSB3bZ_N7xvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "422728581641-oh2s95nv3g7dc1vtd86fajfspnjesvun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
