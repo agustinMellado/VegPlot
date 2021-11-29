@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".HortalizasOI">
 
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -18,15 +20,9 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/fondohorta" />
-    </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+
+
 
         <TextView
             android:id="@+id/titulo"
@@ -37,20 +33,19 @@
             android:text="OTOÑO-INVIERNO"
             android:textColor="@color/white"
             android:textSize="40sp" />
-    <RelativeLayout
-        android:id="@+id/contenedor_Lista"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/titulo">
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewHortalizas"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item_hortaliza" />
+            android:layout_below="@+id/titulo"
+            tools:listitem="@layout/item_hortaliza"
+
+           />
 
 
-    </RelativeLayout>
+
 
 
     </RelativeLayout>

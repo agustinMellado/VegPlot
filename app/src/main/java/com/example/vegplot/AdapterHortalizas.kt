@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class AdapterHortalizas(private val listaHortalizas: ArrayList<HortalizaData>) :
-    RecyclerView.Adapter<AdapterHortalizas.AdapterHortalizaHolder>() {
+class AdapterHortalizas(private val listaHortalizas: List<HortalizaData>) :
+    RecyclerView.Adapter<AdapterHortalizas.HortalizaViewHolder>() {
 
 
     //declaro el click para seleccionar la informacion y mandar a otro contacto
@@ -29,33 +29,36 @@ class AdapterHortalizas(private val listaHortalizas: ArrayList<HortalizaData>) :
         )
     }
 
+
     //Creacion de funcion para clickear
     fun setOnItemClickListener(listener: OnItemClickListener) {
         mListener = listener
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterHortalizaHolder {
+
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HortalizaViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_hortaliza, parent, false)
 
-        return AdapterHortalizaHolder(view, mListener)
+        return HortalizaViewHolder(view, mListener)
 
     }
 
-    override fun onBindViewHolder(holder: AdapterHortalizaHolder, position: Int) {
-        val hortaliza: HortalizaData = listaHortalizas[position]
+    override fun onBindViewHolder(holder: HortalizaViewHolder, position: Int) {
+        val h: HortalizaData = listaHortalizas[position]
 
-        holder.nombre.text = hortaliza.nombre
-       holder.descripcion.text = hortaliza.descripcion
-        holder.germinacion.text = hortaliza.germinacion
-        holder.profundidad.text = hortaliza.profundidad
-        holder.distancia.text = hortaliza.distancia
-        holder.temporada.text = hortaliza.temporada
-        holder.altura.text = hortaliza.altura
-        holder.cosecha.text = hortaliza.cosecha
-        holder.riego.text = hortaliza.riego
-        holder.siembra.text = hortaliza.siembra
+        holder.nombre.text = h.nombre
+        holder.descripcion.text = h.descripcion
+        holder.germinacion.text = h.germinacion
+        holder.profundidad.text = h.profundidad
+        holder.distancia.text = h.distancia
+        holder.temporada.text = h.temporada
+        holder.altura.text = h.altura
+        holder.cosecha.text = h.cosecha
+        holder.riego.text = h.riego
+        holder.siembra.text = h.siembra
 
 
     }
@@ -66,10 +69,11 @@ class AdapterHortalizas(private val listaHortalizas: ArrayList<HortalizaData>) :
     }
 
     //le enviamos la vista que pasa por viewHolder
-    class AdapterHortalizaHolder(itemView: View, listener: OnItemClickListener) :
+    class HortalizaViewHolder(itemView: View, listener: OnItemClickListener) :
         RecyclerView.ViewHolder(itemView) {
-        //  val imagen: ImageView = itemView.findViewById(R.id.imagenHor)
+
         val nombre: TextView = itemView.findViewById(R.id.nombreHor)
+
         val descripcion: TextView = itemView.findViewById(R.id.descripcion)
         val germinacion: TextView = itemView.findViewById(R.id.germinacion)
         val profundidad: TextView = itemView.findViewById(R.id.profundidad)
@@ -85,7 +89,7 @@ class AdapterHortalizas(private val listaHortalizas: ArrayList<HortalizaData>) :
             itemView.setOnClickListener {
                 listener.onItemClick(
                     bindingAdapterPosition,
-                    //imagen.setImageResource(),
+
                     nombre.text.toString(),
                     descripcion.text.toString(),
                     germinacion.text.toString(),
@@ -101,7 +105,12 @@ class AdapterHortalizas(private val listaHortalizas: ArrayList<HortalizaData>) :
             }
 
 
+
+
         }
+        
+
     }
+
 
 }

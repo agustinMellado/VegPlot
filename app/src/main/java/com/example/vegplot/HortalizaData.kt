@@ -1,15 +1,15 @@
 package com.example.vegplot
 
 data class HortalizaData(
-  //  val imagenUrl: String? = null,
-    val nombre: String? = null,
-    val descripcion: String? = null,
-    val germinacion: String? = null,
-    val profundidad: String? = null,
-    val distancia: String? = null,
-    val temporada: String? = null,
-    val altura: String? = null,
-    val cosecha: String? = null,
-    val riego: String? = null,
-    val siembra: String? = null,
+
+    var altura: String? = null,
+    var nombre: String? = null,
+    var descripcion: String? = null,
+    var germinacion: String? = null,
+    var profundidad: String? = null,
+    var distancia: String? = null,
+    var temporada: String? = null,
+    var cosecha: String? = null,
+    var riego: String? = null,
+    var siembra: String? = null
 )
