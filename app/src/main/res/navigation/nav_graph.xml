@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/hortalizasOI">
+
+    <fragment
+        android:id="@+id/hortalizasOI"
+        android:name="com.example.vegplot.HortalizasOI"
+        android:label="fragment_hortalizas_o_i"
+        tools:layout="@layout/fragment_hortalizas_o_i" >
+        <action
+            android:id="@+id/action_hortalizasOI_to_detallesHortaliza"
+            app:destination="@id/detallesHortaliza" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallesHortaliza"
+        android:name="com.example.vegplot.DetallesHortaliza"
+        android:label="fragment_detalles_hortaliza"
+        tools:layout="@layout/fragment_detalles_hortaliza" />
+</navigation>

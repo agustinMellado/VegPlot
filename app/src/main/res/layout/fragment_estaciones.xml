@@ -1,52 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Estaciones">
-<ImageView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:src="@drawable/estacion"
-    android:scaleType="centerCrop"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¡Bienvenido!"
-        android:textSize="56sp"
-        android:textColor="@color/white"/>
 
-    <FrameLayout
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/estacion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="¡Bienvenido!"
+        android:textColor="@color/white"
+        android:textSize="56sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
         android:layout_gravity="center_vertical"
+
+        android:layout_marginBottom="176dp"
         android:background="@drawable/border_input"
         android:backgroundTint="#AD8BC34A"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
 
-        android:orientation="vertical">
+        app:layout_constraintVertical_bias="1.0"
+
+        >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:text="SELECCIONE LA TEMPORADA"
             android:textColor="@color/white"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+
+            />
 
         <Button
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/boton"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/botonnaranja"
 
-            android:backgroundTint="#FF5722"
 
             android:text="otoño-invierno" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:text="*De 20 de marzo al 22 de septiembre"
             android:textColor="@color/white"
             android:textSize="15sp" />
@@ -54,7 +81,7 @@
         <Button
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="30dp"
 
             android:backgroundTint="#FF9800"
 
@@ -64,10 +91,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="*Del 22 de septiembre hasta el 20 de marzo"
+            android:layout_marginTop="15dp"
+            android:text="*Del 22 de septiembre hasta el 20 de marzo*"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
-    </FrameLayout>
+    </LinearLayout>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
