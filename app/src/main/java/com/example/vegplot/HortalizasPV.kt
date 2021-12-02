@@ -2,17 +2,17 @@ package com.example.vegplot
 
 import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.*
 
-class HortalizasOI : Fragment() {
 
+class HortalizasPV : Fragment() {
     //Declaracion de variables
     private lateinit var db: FirebaseFirestore
     private lateinit var recyclerView: RecyclerView
@@ -25,7 +25,7 @@ class HortalizasOI : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val view: View = inflater.inflate(R.layout.fragment_hortalizas_p_v, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_hortalizas_o_i, container, false)
 
 
         //instanciamos recycler y le asigno el manager
@@ -69,7 +69,7 @@ class HortalizasOI : Fragment() {
 
 
                 //mando la informacion que almacene en la bundle al fragmento de detalles hortaliza
-                view.findNavController().navigate(R.id.action_hortalizasPV_to_detallesHortaliza,bundle)
+                view.findNavController().navigate(R.id.action_hortalizasOI_to_detallesHortaliza,bundle)
 
             }
         })
@@ -84,7 +84,7 @@ class HortalizasOI : Fragment() {
         //Le asigno a la variable la instancia de la base de datos
         db = FirebaseFirestore.getInstance()
         //voy a la coleccion dentro de firebase y con el listener captamos los movimiento dentro de esta
-        db.collection("hortalizasOI").addSnapshotListener(object : EventListener<QuerySnapshot> {
+        db.collection("hortalizasPV").addSnapshotListener(object : EventListener<QuerySnapshot> {
 
             override fun onEvent(
                 value: QuerySnapshot?,

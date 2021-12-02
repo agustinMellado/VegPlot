@@ -112,7 +112,7 @@
             android:text="confirma contraseña" />
 
         <EditText
-            android:id="@+id/repetirPasswordUsuario"
+            android:id="@+id/confirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -130,6 +130,7 @@
             android:layout_marginTop="30dp"
             android:background="@drawable/boton"
             android:text="registrar" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

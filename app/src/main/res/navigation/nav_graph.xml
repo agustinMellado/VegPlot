@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/hortalizasOI">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/hortalizasOI"
@@ -19,4 +19,45 @@
         android:name="com.example.vegplot.DetallesHortaliza"
         android:label="fragment_detalles_hortaliza"
         tools:layout="@layout/fragment_detalles_hortaliza" />
+    <fragment
+        android:id="@+id/estaciones"
+        android:name="com.example.vegplot.Estaciones"
+        android:label="fragment_estaciones"
+        tools:layout="@layout/fragment_estaciones" >
+        <action
+            android:id="@+id/action_estaciones_to_hortalizasOI"
+            app:destination="@id/hortalizasOI" />
+        <action
+            android:id="@+id/action_estaciones_to_hortalizasPV"
+            app:destination="@id/hortalizasPV" />
+    </fragment>
+    <fragment
+        android:id="@+id/hortalizasPV"
+        android:name="com.example.vegplot.HortalizasPV"
+        android:label="HortalizasPV" >
+        <action
+            android:id="@+id/action_hortalizasPV_to_detallesHortaliza"
+            app:destination="@id/detallesHortaliza" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.vegplot.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.vegplot.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_estaciones"
+            app:destination="@id/estaciones" />
+    </fragment>
 </navigation>

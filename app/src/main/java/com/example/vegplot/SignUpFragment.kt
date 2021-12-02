@@ -1,6 +1,7 @@
 package com.example.vegplot
 
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -8,97 +9,108 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.content.res.AppCompatResources
+import androidx.navigation.findNavController
 import com.example.vegplot.databinding.FragmentSignUpBinding
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
 import java.util.*
 import java.util.regex.Pattern
 
 class SignUpFragment : Fragment() {
-/*
-    private var _binding: FragmentSignUpBinding? = null
 
-    //creo otra variable que va a llamar a _binding
-    private val binding get() = _binding!!
-
+    private lateinit var nombreUsuario: EditText
+    private lateinit var email: EditText
+    private lateinit var password: EditText
+    private lateinit var confirmPass: EditText
     private lateinit var auth: FirebaseAuth
-    private lateinit var db: DatabaseReference
-
-    val nombreUsuario = view?.findViewById<EditText>(R.id.nombreUsuario)
-    val emailUsuario = view?.findViewById<EditText>(R.id.emailUsuario)
-    val passwordUsuario = view?.findViewById<EditText>(R.id.passwordUsuario)
-    val repetirPasswordUsuario = view?.findViewById<EditText>(R.id.repetirPasswordUsuario)
-    val btn_registro = view?.findViewById<Button>(R.id.btn_registro)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        _binding = FragmentSignUpBinding.inflate(inflater, container, false)
-        auth = FirebaseAuth.getInstance()
-        db = FirebaseDatabase.getInstance().reference
+        //inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_sign_up, container, false)
 
+        nombreUsuario = view.findViewById(R.id.nombreUsuario)
+        email = view.findViewById(R.id.emailUsuario)
+        password = view.findViewById(R.id.passwordUsuario)
+        confirmPass = view.findViewById(R.id.confirmPassword)
 
-      btn_registro?.setOnClickListener {
+        auth = Firebase.auth
+        //colocar el navegation cuando lo cree en el nav_graph xdxdxd
+
+        view.findViewById<Button>(R.id.btn_registro).setOnClickListener {
             verificacion()
+
         }
 
-        return binding.root
+
+
+
+        return view
     }
 
+
     private fun verificacion() {
-        val nombreUsuario = nombreUsuario?.text.toString().trim()
-        val emailUsuario = emailUsuario?.text.toString().trim()
-        val passwordUsuario = passwordUsuario?.text.toString().trim()
-        val repetirPasswordUsuario = repetirPasswordUsuario?.text.toString().trim()
-
-        //verifico que la contraseña sea mayor igual que 8
-        if (passwordUsuario.length < 8) {
-            Toast.makeText(context, "La contraseña es muy corta", Toast.LENGTH_SHORT).show()
-        } else {
-            // verifico que la contraseña tenga al menos 1 numero
-            if (!Pattern.compile("[0-9]]").matcher(passwordUsuario).find()) {
-                Toast.makeText(context, "Debe tener al menos un numero", Toast.LENGTH_SHORT).show()
-            } else {
-                //verifico que las contraseñas sean iguales
-                if (passwordUsuario == repetirPasswordUsuario) {
-                    // una vez verificada la informacion de registro creo el usuario
-                    registrar(nombreUsuario,emailUsuario, passwordUsuario)
 
 
+        //verifico que los campos de registro no se encuentren vacios
+        when {
+            TextUtils.isEmpty(nombreUsuario.text.toString().trim()) -> {
+                nombreUsuario.setError("porfavor ingrese su nombre")
+            }
+            TextUtils.isEmpty(email.text.toString().trim()) -> {
+                email.setError("porfavor ingrese su email")
+            }
+            TextUtils.isEmpty(password.text.toString().trim()) -> {
+                password.setError("porfavor ingrese su contraseña")
+            }
+            TextUtils.isEmpty(confirmPass.text.toString().trim()) -> {
+                confirmPass.setError("porfavor ingrese su confirmacion de contraseña")
+            }
+
+
+            email.text.toString().isNotEmpty() && password.text.toString()
+                .isNotEmpty() && confirmPass.text.toString().isNotEmpty() -> {
+
+
+                if (password.text.toString().length >= 8) {
+
+                    if (password.text.toString() == confirmPass.text.toString()) {
+                        registro()
+                        Toast.makeText(context, "registro exitoso", Toast.LENGTH_SHORT).show()
+                    } else {
+                        confirmPass.setError("las contraseñas no coinciden")
+                    }
                 } else {
-                    Toast.makeText(context, "Las contraseñas no coinciden", Toast.LENGTH_SHORT)
-                        .show()
+                    password.setError("Porfavor coloque una contraseña mayor a 8 caracteres")
                 }
 
             }
 
-
         }
 
 
     }
 
-    private fun registrar(nombre:String,email: String, password: String) {
-        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(requireActivity()) { task: Task<AuthResult?> ->
-            if (task.isSuccessful) {
+    private fun registro() {
+        auth.createUserWithEmailAndPassword(email.text.toString(), password.text.toString())
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    view?.findNavController()?.navigate(R.id.action_signUpFragment_to_loginFragment)
+                    Toast.makeText(context, "registro exitoso", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(context, task.exception?.message, Toast.LENGTH_SHORT).show()
 
-                Toast.makeText(context, "Registro exitoso", Toast.LENGTH_SHORT).show()
-                val uid= Objects.requireNonNull(auth!!.currentUser)?.uid
-
-                val user=Usuario(nombre,email)
-                db.child("usuarios").child(uid.toString()).setValue(user)
-            } else {
-                Toast.makeText(context, "no se pudo registrar", Toast.LENGTH_SHORT).show()
+                }
             }
-        }
-
     }
 
- */
 
 }
