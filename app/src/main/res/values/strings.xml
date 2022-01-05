@@ -30,10 +30,10 @@
     <string name="text_riego">Riego:</string>
     <string name="text_modoSiembra">Modo de siembra:</string>
     <string name="text_culvito">Modo de cultivo:</string>
-    <string name="text_ind1">*De 20 de marzo al 22 de septiembre*</string>
     <string name="text_germinacion">Germinacion:</string>
     <string name="text_ind2">*Del 22 de septiembre hasta el 20 de marzo*</string>
     <string name="text_modosiembra">MODO DE SIEMBRA:</string>
+    <string name="text_ind1">*De 20 de marzo al 22 de septiembre*</string>
 
 
 </resources>

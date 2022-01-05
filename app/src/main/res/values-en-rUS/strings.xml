@@ -13,8 +13,8 @@
     <string name="text_confirmar">Confrim Password</string>
     <string name="input_nombre">Enter your username</string>
     <string name="input_confirmar">Repeat your password</string>
-    <string name="titulo_estacionOI">" Autumn Winter"</string>
-    <string name="titulo_estacionPV">" spring Summer"</string>
+    <string name="titulo_estacionOI">AUTUMN WINTER</string>
+    <string name="titulo_estacionPV">SPRING SUMMER</string>
     <string name="titulo_bienvenido">¡Welcome!</string>
     <string name="text_selectemp">SELECT THE SEASON</string>
     <string name="btn_oi">AUTUMN WINTER</string>

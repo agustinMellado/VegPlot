@@ -1,4 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">VegPlot</string>
+    <string name="btn_registrar">registrare</string>
+    <string name="btn_ingresar">entrare dentro</string>
+    <string name="input_email">Inserisci il tuo indirizzo email</string>
+    <string name="input_password">Inserisci la tua password</string>
+    <string name="text_registro">registrazione</string>
+    <string name="text_register">REGISTRAZIONE</string>
+    <string name="text_nombre">nome</string>
+    <string name="text_email">E-mail</string>
+    <string name="text_contraseña">parola d\'ordine</string>
+    <string name="text_confirmar">Conferma password</string>
+    <string name="input_nombre">Inserisci il tuo nome utente</string>
+    <string name="input_confirmar">Ripeti la tua password</string>
+    <string name="titulo_estacionOI">AUTUNNO INVERNO</string>
+    <string name="titulo_estacionPV">PRIMAVERA ESTATE</string>
+    <string name="titulo_bienvenido">¡Benvenuto!</string>
+    <string name="text_selectemp">SELEZIONA LA STAGIONE</string>
+    <string name="btn_oi">AUTUNO INVERNO</string>
+    <string name="btn_pv">PRIMAVERA ESTATE</string>
+    <string name="text_profundidad">Profondità:</string>
+    <string name="text_distancia">distanza tra i piani:</string>
+    <string name="text_temporada">La stagione:</string>
+    <string name="text_altura">Altezza:</string>
+    <string name="text_cosecha">Raccolto:</string>
+    <string name="text_riego">Irrigazione:</string>
+    <string name="text_modoSiembra">Modalità di semina:</string>
+    <string name="text_culvito">Modalità di coltivazione:</string>
+    <string name="text_ind1">* Dal 20 marzo al 22 settembre *</string>
+    <string name="text_germinacion">Germinazione:</string>
+    <string name="text_ind2">* Dal 22 settembre al 20 marzo *</string>
+    <string name="text_modosiembra">MODALITÀ DI SEMINA</string>
 </resources>
