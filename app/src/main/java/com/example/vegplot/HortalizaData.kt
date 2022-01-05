@@ -1,7 +1,7 @@
 package com.example.vegplot
 
 data class HortalizaData(
-
+    var imagenUrl:String?=null,
     var altura: String? = null,
     var nombre: String? = null,
     var descripcion: String? = null,

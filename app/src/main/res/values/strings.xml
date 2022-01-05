@@ -1,5 +1,39 @@
 <resources>
     <string name="app_name">VegPlot</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="btn_registrar">registrarse</string>
+    <string name="btn_ingresar">ingresar</string>
+
+    <string name="input_email">ingrese su email</string>
+    <string name="input_password">ingrese su contraseña</string>
+    <string name="text_registro">registro</string>
+    <string name="text_register">REGISTRO</string>
+    <string name="text_nombre">Nombre</string>
+    <string name="text_email">E-mail</string>
+    <string name="text_contraseña">Contraseña</string>
+    <string name="text_confirmar">Confirmar contraseña</string>
+    <string name="input_nombre">ingresa tu nombre de usuario</string>
+    <string name="input_confirmar">Repita su contraseña</string>
+    <string name="titulo_estacionOI">OTOÑO-INVIERNO</string>
+    <string name="titulo_estacionPV">PRIMAVERA-VERANO</string>
+    <string name="titulo_bienvenido">¡Bienvenido!</string>
+    <string name="text_selectemp">SELECCIONE LA TEMPORADA</string>
+    <string name="btn_oi">OTOÑO-INVIERNO</string>
+    <string name="btn_pv">PRIMAVERA-VERANO</string>
+    <string name="text_profundidad">Profundidad:</string>
+    <string name="text_distancia">Distancia entre plantas:</string>
+    <string name="text_temporada">Temporada:</string>
+    <string name="text_altura">Altura:</string>
+    <string name="text_cosecha">Cosecha:</string>
+    <string name="text_riego">Riego:</string>
+    <string name="text_modoSiembra">Modo de siembra:</string>
+    <string name="text_culvito">Modo de cultivo:</string>
+    <string name="text_ind1">*De 20 de marzo al 22 de septiembre*</string>
+    <string name="text_germinacion">Germinacion:</string>
+    <string name="text_ind2">*Del 22 de septiembre hasta el 20 de marzo*</string>
+    <string name="text_modosiembra">MODO DE SIEMBRA:</string>
+
+
 </resources>

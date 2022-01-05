@@ -25,6 +25,13 @@
                 android:layout_height="351dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/login" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VegPlot"
+                android:textSize="56sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"/>
         </FrameLayout>
     </LinearLayout>
 
@@ -46,12 +53,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:ems="10"
-            android:inputType="textEmailAddress"
+
+
             android:background="@drawable/border_input"
-            android:padding="15dp"
-            android:hint="Ingrese tu email"
-            />
+            android:hint="@string/input_email"
+            android:padding="15dp" />
 
         <EditText
             android:id="@+id/log_password"
@@ -59,30 +65,22 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/border_input"
-            android:ems="10"
-            android:hint="Ingrese tu contraseña"
+
+            android:hint="@string/input_password"
             android:inputType="textPassword"
             android:padding="15dp" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textSize="16dp"
-            android:text="¿Olvidaste tu contraseña?" />
 
         <Button
             android:id="@+id/btn_inicioSesion"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="ingresar"
+            android:layout_gravity="center"
             android:layout_marginTop="50dp"
 
+            android:background="@drawable/botonnaranja"
+            android:text="ingresar"
 
-            android:layout_gravity="center"
-
-            />
+            tools:text="@string/btn_ingresar" />
 
         <Button
             android:id="@+id/btn_registro"
@@ -90,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:text="registrarse"
-            android:background="@drawable/boton"
+            android:background="@drawable/border_input"
             android:layout_gravity="center"
             />
     </LinearLayout>

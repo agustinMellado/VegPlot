@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VegPlot</string>
+    <string name="btn_registrar">sign Up</string>
+    <string name="btn_ingresar">Login</string>
+    <string name="input_email">enter your email</string>
+    <string name="input_password">enter your password</string>
+    <string name="text_registro">sign up</string>
+    <string name="text_register">SIGN UP</string>
+    <string name="text_nombre">Name</string>
+    <string name="text_email">E-mail</string>
+    <string name="text_contraseña">Password</string>
+    <string name="text_confirmar">Confrim Password</string>
+    <string name="input_nombre">Enter your username</string>
+    <string name="input_confirmar">Repeat your password</string>
+    <string name="titulo_estacionOI">" Autumn Winter"</string>
+    <string name="titulo_estacionPV">" spring Summer"</string>
+    <string name="titulo_bienvenido">¡Welcome!</string>
+    <string name="text_selectemp">SELECT THE SEASON</string>
+    <string name="btn_oi">AUTUMN WINTER</string>
+    <string name="text_ind1">* From March 20 to September 22 *</string>
+    <string name="text_ind2">* From September 22 to March 20 *</string>
+    <string name="btn_pv">SPRING SUMMER</string>
+    <string name="text_modosiembra">SOWING MODE:</string>
+    <string name="text_germinacion">Germination:</string>
+    <string name="text_profundidad">Depth</string>
+    <string name="text_distancia">Distance between floors:</string>
+    <string name="text_temporada">Season:</string>
+    <string name="text_altura">Height:</string>
+    <string name="text_cosecha">Harvest:</string>
+    <string name="text_riego">Irrigation:</string>
+    <string name="text_modoSiembra">Sowing mode:</string>
+    <string name="text_culvito">Cultivation mode:</string>
+</resources>

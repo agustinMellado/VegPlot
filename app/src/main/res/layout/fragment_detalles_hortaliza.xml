@@ -20,7 +20,7 @@
 
 
                 <ImageView
-                    android:id="@+id/imagenHor"
+                    android:id="@+id/imagenDetalle"
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
                     android:scaleType="centerCrop"
@@ -43,7 +43,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="534dp"
                 android:background="#9F8BC34A"
                 android:orientation="vertical"
 
@@ -138,7 +138,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Distancia entre plantas: "
+                            android:text="@string/text_distancia"
                             android:textSize="15sp" />
 
                         <TextView
@@ -160,7 +160,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Temporada: "
+                            android:text="@string/text_temporada"
                             android:textSize="15sp" />
 
                         <TextView
@@ -180,7 +180,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Modo de cultivo:"
+                    android:text="@string/text_culvito"
                     android:textSize="20sp" />
 
                 <LinearLayout
@@ -202,7 +202,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Altura: "
+                            android:text="@string/text_altura"
                             android:textSize="15sp" />
 
                         <TextView
@@ -224,7 +224,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Cosecha: "
+                            android:text="@string/text_cosecha"
                             android:textSize="15sp" />
 
                         <TextView
@@ -246,7 +246,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Riego: "
+                            android:text="@string/text_riego"
                             android:textSize="15sp" />
 
                         <TextView
@@ -268,7 +268,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Modo de siembra: "
+                            android:text="@string/text_modoSiembra"
                             android:textSize="15sp" />
 
                         <TextView
@@ -283,13 +283,6 @@
 
                 </LinearLayout>
 
-                <Button
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:text="agregar a huerta" />
             </LinearLayout>
 
 

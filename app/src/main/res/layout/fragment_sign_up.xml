@@ -32,7 +32,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="80dp"
-                android:text="REGISTRO"
+                android:text="@string/text_register"
+                android:textColor="@color/white"
                 android:textSize="54sp" />
         </FrameLayout>
     </LinearLayout>
@@ -55,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Nombre" />
+            android:text="@string/text_nombre" />
 
         <EditText
             android:id="@+id/nombreUsuario"
@@ -64,7 +65,7 @@
             android:layout_marginTop="5dp"
             android:background="@drawable/border_input"
             android:ems="10"
-            android:hint="ingresa tu nombre de usuario"
+            android:hint="@string/input_nombre"
             android:inputType="textPersonName"
             android:padding="15dp" />
 
@@ -73,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="E-mail" />
+            android:text="@string/text_email" />
 
         <EditText
             android:id="@+id/emailUsuario"
@@ -91,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Contraseña" />
+            android:text="@string/text_contraseña" />
 
         <EditText
             android:id="@+id/passwordUsuario"
@@ -100,7 +101,7 @@
             android:layout_marginTop="5dp"
             android:background="@drawable/border_input"
             android:ems="10"
-            android:hint="Ingresa tu contraseña"
+            android:hint="@string/input_password"
             android:inputType="textPassword"
             android:padding="15dp" />
 
@@ -109,7 +110,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="confirma contraseña" />
+            android:text="@string/text_confirmar" />
 
         <EditText
             android:id="@+id/confirmPassword"
@@ -118,7 +119,7 @@
             android:layout_marginTop="5dp"
             android:background="@drawable/border_input"
             android:ems="10"
-            android:hint="Repita contraseña"
+            android:hint="@string/input_confirmar"
             android:inputType="textPassword"
             android:padding="15dp" />
 
@@ -128,8 +129,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:background="@drawable/boton"
-            android:text="registrar" />
+            android:background="@drawable/botonnaranja"
+            android:text="@string/btn_registrar" />
 
     </LinearLayout>
 

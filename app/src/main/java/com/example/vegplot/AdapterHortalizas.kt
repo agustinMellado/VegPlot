@@ -1,10 +1,13 @@
 package com.example.vegplot
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class AdapterHortalizas(private val listaHortalizas: List<HortalizaData>) :
     RecyclerView.Adapter<AdapterHortalizas.HortalizaViewHolder>() {
@@ -16,6 +19,7 @@ class AdapterHortalizas(private val listaHortalizas: List<HortalizaData>) :
     interface OnItemClickListener {
         fun onItemClick(
             position: Int,
+            imagenUrl:String,
             nombre: String,
             descripcion: String,
             germinacion: String,
@@ -48,7 +52,15 @@ class AdapterHortalizas(private val listaHortalizas: List<HortalizaData>) :
 
     override fun onBindViewHolder(holder: HortalizaViewHolder, position: Int) {
         val h: HortalizaData = listaHortalizas[position]
+       /*
+        //imagen tomada con el glide
 
+        if (context != null) {
+            Glide.with(context)
+                .load(h.imagenUrl)
+                .into(holder.imagenUrl)
+        }*/
+        holder.imagenUrl.text = h.imagenUrl
         holder.nombre.text = h.nombre
         holder.descripcion.text = h.descripcion
         holder.germinacion.text = h.germinacion
@@ -71,7 +83,7 @@ class AdapterHortalizas(private val listaHortalizas: List<HortalizaData>) :
     //le enviamos la vista que pasa por viewHolder
     class HortalizaViewHolder(itemView: View, listener: OnItemClickListener) :
         RecyclerView.ViewHolder(itemView) {
-
+        val imagenUrl: TextView= itemView.findViewById(R.id.imagenHor)
         val nombre: TextView = itemView.findViewById(R.id.nombreHor)
 
         val descripcion: TextView = itemView.findViewById(R.id.descripcion)
@@ -89,7 +101,7 @@ class AdapterHortalizas(private val listaHortalizas: List<HortalizaData>) :
             itemView.setOnClickListener {
                 listener.onItemClick(
                     bindingAdapterPosition,
-
+                    imagenUrl.text.toString(),
                     nombre.text.toString(),
                     descripcion.text.toString(),
                     germinacion.text.toString(),

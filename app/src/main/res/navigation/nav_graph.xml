@@ -32,14 +32,6 @@
             app:destination="@id/hortalizasPV" />
     </fragment>
     <fragment
-        android:id="@+id/hortalizasPV"
-        android:name="com.example.vegplot.HortalizasPV"
-        android:label="HortalizasPV" >
-        <action
-            android:id="@+id/action_hortalizasPV_to_detallesHortaliza"
-            app:destination="@id/detallesHortaliza" />
-    </fragment>
-    <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.vegplot.SignUpFragment"
         android:label="fragment_sign_up"
@@ -59,5 +51,14 @@
         <action
             android:id="@+id/action_loginFragment_to_estaciones"
             app:destination="@id/estaciones" />
+    </fragment>
+    <fragment
+        android:id="@+id/hortalizasPV"
+        android:name="com.example.vegplot.HortalizasPV"
+        android:label="fragment_hortalizas_p_v"
+        tools:layout="@layout/fragment_hortalizas_p_v" >
+        <action
+            android:id="@+id/action_hortalizasPV_to_detallesHortaliza"
+            app:destination="@id/detallesHortaliza" />
     </fragment>
 </navigation>

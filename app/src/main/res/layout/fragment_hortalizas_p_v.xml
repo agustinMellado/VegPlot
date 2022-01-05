@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HortalizasOI">
+    tools:context=".HortalizasPV">
 
 
     <RelativeLayout
@@ -28,17 +28,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-                android:text="PRIMAVERA-VERANO"
+            android:text="@string/titulo_estacionPV"
             android:textColor="@color/white"
             android:textSize="40sp" />
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewHortalizas"
+            android:id="@+id/recyclerViewHortalizasPv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/titulo"
-            tools:listitem="@layout/item_hortaliza"
+
 
             />
 

@@ -11,23 +11,19 @@ import androidx.navigation.findNavController
 
 class Estaciones : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
        val view: View = inflater.inflate(R.layout.fragment_estaciones, container, false)
         //boton para ir al fragmento otonio invierno
-        view.findViewById<Button>(R.id.btn_ot).setOnClickListener{
+        view.findViewById<Button>(R.id.btn_oi).setOnClickListener{
             view.findNavController().navigate(R.id.action_estaciones_to_hortalizasOI)
         }
         view.findViewById<Button>(R.id.btn_pv).setOnClickListener{
-            view.findNavController().navigate(R.id.action_estaciones_to_hortalizasOI)
+            view.findNavController().navigate(R.id.action_estaciones_to_hortalizasPV)
         }
         return view
     }
