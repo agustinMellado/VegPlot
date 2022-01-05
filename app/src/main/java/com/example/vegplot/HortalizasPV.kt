@@ -25,11 +25,11 @@ class HortalizasPV : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val view: View = inflater.inflate(R.layout.fragment_hortalizas_o_i, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_hortalizas_p_v, container, false)
 
 
         //instanciamos recycler y le asigno el manager
-        recyclerView = view.findViewById(R.id.recyclerViewHortalizas)
+        recyclerView = view.findViewById(R.id.recyclerViewHortalizasPv)
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.setHasFixedSize(true)
         //inicializo el arreglo y se lo paso al adaptador
@@ -38,11 +38,11 @@ class HortalizasPV : Fragment() {
         adapter = AdapterHortalizas(listaDeHortalizas)
         recyclerView.adapter = adapter
 
-
         //utilizo el itemClick del adaptador
         adapter.setOnItemClickListener(object : AdapterHortalizas.OnItemClickListener {
             override fun onItemClick(
                 position: Int,
+                imagenUrl:String,
                 nombre: String,
                 descripcion: String,
                 germinacion: String,
@@ -56,6 +56,7 @@ class HortalizasPV : Fragment() {
 
             ) {
                 val bundle = Bundle()
+                bundle.putString("imagenUrl",imagenUrl)
                 bundle.putString("nombre", nombre)
                 bundle.putString("descripcion", descripcion)
                 bundle.putString("germinacion", germinacion)
@@ -69,7 +70,7 @@ class HortalizasPV : Fragment() {
 
 
                 //mando la informacion que almacene en la bundle al fragmento de detalles hortaliza
-                view.findNavController().navigate(R.id.action_hortalizasOI_to_detallesHortaliza,bundle)
+                view.findNavController().navigate(R.id.action_hortalizasPV_to_detallesHortaliza,bundle)
 
             }
         })
