@@ -105,6 +105,7 @@ class SignUpFragment : Fragment() {
                 if (task.isSuccessful) {
                     view?.findNavController()?.navigate(R.id.action_signUpFragment_to_loginFragment)
                     Toast.makeText(context, "registro exitoso", Toast.LENGTH_SHORT).show()
+
                 } else {
                     Toast.makeText(context, task.exception?.message, Toast.LENGTH_SHORT).show()
 

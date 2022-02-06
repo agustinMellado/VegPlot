@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Agustin Mellado/AndroidStudioProjects/VegPlot/app/src/main/res/layout/activity_main.xml" value="0.12952898550724637" />
+        <entry key="..\:/Users/Agustin Mellado/AndroidStudioProjects/VegPlot/app/src/main/res/layout/fragment_detalles_hortaliza.xml" value="0.22" />
         <entry key="..\:/Users/aguxm/AndroidStudioProjects/VegPlot/app/src/main/res/drawable/border_fondo.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/aguxm/AndroidStudioProjects/VegPlot/app/src/main/res/drawable/border_input.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/aguxm/AndroidStudioProjects/VegPlot/app/src/main/res/drawable/boton.xml" value="0.18611111111111112" />

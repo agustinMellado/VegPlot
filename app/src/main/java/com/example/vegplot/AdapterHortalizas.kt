@@ -52,14 +52,7 @@ class AdapterHortalizas(private val listaHortalizas: List<HortalizaData>) :
 
     override fun onBindViewHolder(holder: HortalizaViewHolder, position: Int) {
         val h: HortalizaData = listaHortalizas[position]
-       /*
-        //imagen tomada con el glide
 
-        if (context != null) {
-            Glide.with(context)
-                .load(h.imagenUrl)
-                .into(holder.imagenUrl)
-        }*/
         holder.imagenUrl.text = h.imagenUrl
         holder.nombre.text = h.nombre
         holder.descripcion.text = h.descripcion
