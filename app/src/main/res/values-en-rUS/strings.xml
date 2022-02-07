@@ -23,7 +23,7 @@
     <string name="btn_pv">SPRING SUMMER</string>
     <string name="text_modosiembra">SOWING MODE:</string>
     <string name="text_germinacion">Germination:</string>
-    <string name="text_profundidad">Depth</string>
+    <string name="text_profundidad">Depth:</string>
     <string name="text_distancia">Distance between floors:</string>
     <string name="text_temporada">Season:</string>
     <string name="text_altura">Height:</string>
@@ -31,4 +31,5 @@
     <string name="text_riego">Irrigation:</string>
     <string name="text_modoSiembra">Sowing mode:</string>
     <string name="text_culvito">Cultivation mode:</string>
+    <string name="btn_registrarse_principal">sign up</string>
 </resources>

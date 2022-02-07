@@ -8,7 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-
+//el adapter es el que se encarga de agarrar toda la informacion y configurarla para que el
+//recyclerview pueda rellenar los items
 class AdapterHortalizas(private val listaHortalizas: List<HortalizaData>) :
     RecyclerView.Adapter<AdapterHortalizas.HortalizaViewHolder>() {
 
@@ -19,7 +20,7 @@ class AdapterHortalizas(private val listaHortalizas: List<HortalizaData>) :
     interface OnItemClickListener {
         fun onItemClick(
             position: Int,
-            imagenUrl:String,
+            imagenUrl: String,
             nombre: String,
             descripcion: String,
             germinacion: String,
@@ -40,16 +41,15 @@ class AdapterHortalizas(private val listaHortalizas: List<HortalizaData>) :
     }
 
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HortalizaViewHolder {
+        //inflamos la vista
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_hortaliza, parent, false)
 
         return HortalizaViewHolder(view, mListener)
 
     }
-
+    //toma la posicion del item que corresponda, agrega los datos donde deban ir
     override fun onBindViewHolder(holder: HortalizaViewHolder, position: Int) {
         val h: HortalizaData = listaHortalizas[position]
 
@@ -89,7 +89,7 @@ class AdapterHortalizas(private val listaHortalizas: List<HortalizaData>) :
         val riego: TextView = itemView.findViewById(R.id.riego)
         val siembra: TextView = itemView.findViewById(R.id.siembra)
 
-        //Cargamos los datos en el listener para tenerlos listos para pasar
+        //Cargamos los datos en el listener para tenerlos listos para pasar al momento de hacer click
         init {
             itemView.setOnClickListener {
                 listener.onItemClick(

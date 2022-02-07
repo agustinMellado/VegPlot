@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 
 
 class DetallesHortaliza : Fragment() {
+    //declaracion de variables
     private lateinit var imagenUrl: String
     private lateinit var nombre:TextView
     private lateinit var descripcion: TextView
@@ -47,6 +48,10 @@ class DetallesHortaliza : Fragment() {
         siembra=view.findViewById(R.id.siembra)
         imagenDetalle= view.findViewById(R.id.imagenDetalle)
 
+        /*
+        antes de inflar la vista pasamos los datos guardados en el fragmento anterior atravez del click
+        para asi mostrar los datos de este item en especifico
+         */
 
         //les paso los datos a la vista
         Glide.with(this)

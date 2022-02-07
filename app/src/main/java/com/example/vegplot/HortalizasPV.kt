@@ -24,6 +24,7 @@ class HortalizasPV : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        //instanciamos el layout correspondiente y se lo asignamos a la variable view
 
         val view: View = inflater.inflate(R.layout.fragment_hortalizas_p_v, container, false)
 
@@ -55,6 +56,7 @@ class HortalizasPV : Fragment() {
                 siembra: String
 
             ) {
+                //almacenamos los datos en bundle para asi poder pasarlos al otro fragmento
                 val bundle = Bundle()
                 bundle.putString("imagenUrl",imagenUrl)
                 bundle.putString("nombre", nombre)

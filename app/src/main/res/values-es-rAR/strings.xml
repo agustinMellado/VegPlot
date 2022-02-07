@@ -31,5 +31,6 @@
     <string name="text_ind2">*Del 22 de septiembre hasta el 20 de marzo*</string>
     <string name="text_modosiembra">MODO DE SIEMBRA:</string>
     <string name="text_ind1">*De 20 de marzo al 22 de septiembre*</string>
+    <string name="btn_registrarse_principal">registrarse</string>
 
 </resources>

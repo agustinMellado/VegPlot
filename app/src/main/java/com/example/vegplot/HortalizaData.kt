@@ -1,5 +1,5 @@
 package com.example.vegplot
-
+//Creo un modelo de dato para añadir informacion sobre los datos de las hortalizas
 data class HortalizaData(
     var imagenUrl:String?=null,
     var altura: String? = null,

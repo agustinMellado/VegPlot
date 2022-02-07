@@ -36,7 +36,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="415dp"
+        android:layout_width="match_parent"
         android:layout_height="420dp"
         android:background="@drawable/border_fondo"
         android:orientation="vertical"
@@ -86,11 +86,10 @@
             android:id="@+id/btn_registro"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="registrarse"
-            android:background="@drawable/border_input"
             android:layout_gravity="center"
-            />
+            android:layout_marginTop="40dp"
+            android:background="@drawable/border_input"
+            android:text="@string/btn_registrarse_principal" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

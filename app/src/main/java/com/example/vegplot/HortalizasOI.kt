@@ -24,7 +24,7 @@ class HortalizasOI : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
+        //instanciamos el layout correspondiente y se lo asignamos a la variable view
         val view: View = inflater.inflate(R.layout.fragment_hortalizas_o_i, container, false)
 
 

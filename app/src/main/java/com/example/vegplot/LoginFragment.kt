@@ -31,6 +31,8 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //instanciamos el layout correspondiente y se lo asignamos a la variable view
+
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_login, container, false)
 
@@ -60,7 +62,7 @@ class LoginFragment : Fragment() {
 
 
         auth= FirebaseAuth.getInstance()
-
+        //verificacion de correo y contraseña
         auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString())
             .addOnCompleteListener(requireActivity()) { task : Task<AuthResult>->
                 if (task.isSuccessful){
@@ -69,7 +71,7 @@ class LoginFragment : Fragment() {
                 }else{
 
 
-                    Toast.makeText(context, task.exception?.message, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "NO PUEDE ENTRARR, PORFAVOR VERIFIQUE CORREO Y CONTRASEÑA", Toast.LENGTH_SHORT).show()
                 }
 
             }
@@ -87,7 +89,7 @@ class LoginFragment : Fragment() {
                 password.setError("porfavor ingrese su contraseña")
             }
 
-
+        // si estan los campos llenos puede seguir :D
             email.text.toString().isNotEmpty() && password.text.toString()
                 .isNotEmpty() -> {
                 ingresar()

@@ -16,12 +16,13 @@ class Estaciones : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-       val view: View = inflater.inflate(R.layout.fragment_estaciones, container, false)
+         //instanciamos el layout correspondiente y se lo asignamos a la variable view
+        val view: View = inflater.inflate(R.layout.fragment_estaciones, container, false)
         //boton para ir al fragmento otonio invierno
         view.findViewById<Button>(R.id.btn_oi).setOnClickListener{
             view.findNavController().navigate(R.id.action_estaciones_to_hortalizasOI)
         }
+        //boton para ir al fragmento primavera verano
         view.findViewById<Button>(R.id.btn_pv).setOnClickListener{
             view.findNavController().navigate(R.id.action_estaciones_to_hortalizasPV)
         }
