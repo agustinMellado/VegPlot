@@ -31,7 +31,7 @@ class HortalizasOI : Fragment() {
         //instanciamos recycler y le asigno el manager
         recyclerView = view.findViewById(R.id.recyclerViewHortalizas)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.setHasFixedSize(true)
+        recyclerView.setHasFixedSize(true)//lo utilizamos para optimizar el tamaño del recycler
         //inicializo el arreglo y se lo paso al adaptador
         listaDeHortalizas = arrayListOf()
 
