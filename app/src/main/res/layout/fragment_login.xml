@@ -78,9 +78,8 @@
             android:layout_marginTop="50dp"
 
             android:background="@drawable/botonnaranja"
-            android:text="ingresar"
 
-            tools:text="@string/btn_ingresar" />
+            android:text="@string/btn_ingresar" />
 
         <Button
             android:id="@+id/btn_registro"
